@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MessageInteractor
+namespace GoogleInteractor
 {
-    public class Class1
+    interface IGCalendarWriter
     {
+        bool WriteToGCalendar(DateTime when, string Title);    
     }
 }
