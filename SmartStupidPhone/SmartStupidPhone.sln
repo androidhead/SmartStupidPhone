@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartStupidPhone.Console", "SmartStupidPhone.Console\SmartStupidPhone.Console.csproj", "{F43F58F1-7255-404B-9B1A-6F83BB3A6CB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleInteractor", "GoogleInteractor\GoogleInteractor.csproj", "{621E4912-2441-49ED-87EE-559E632C59D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageInteractor", "MessageInteractor\MessageInteractor.csproj", "{FB484DB6-F931-44A0-8829-5E52B93A117B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{F43F58F1-7255-404B-9B1A-6F83BB3A6CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F43F58F1-7255-404B-9B1A-6F83BB3A6CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F43F58F1-7255-404B-9B1A-6F83BB3A6CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621E4912-2441-49ED-87EE-559E632C59D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621E4912-2441-49ED-87EE-559E632C59D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621E4912-2441-49ED-87EE-559E632C59D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621E4912-2441-49ED-87EE-559E632C59D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
