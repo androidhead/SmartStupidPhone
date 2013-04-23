@@ -8,6 +8,6 @@ namespace GoogleInteractor
 {
     interface IGCalendarWriter
     {
-        bool WriteToGCalendar(DateTime when, string Title);    
+        bool WriteToGCalendar(DateTime dateTime, string Title);    
     }
 }

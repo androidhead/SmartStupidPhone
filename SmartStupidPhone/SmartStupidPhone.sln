@@ -5,7 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartStupidPhone.Console", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleInteractor", "GoogleInteractor\GoogleInteractor.csproj", "{621E4912-2441-49ED-87EE-559E632C59D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageInteractor", "MessageInteractor\MessageInteractor.csproj", "{FB484DB6-F931-44A0-8829-5E52B93A117B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{6E5517D0-B2CF-417B-A6A8-7468ACDB402F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranscriptInteractor", "TranscriptInteractor\TranscriptInteractor.csproj", "{FB484DB6-F931-44A0-8829-5E52B93A117B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{621E4912-2441-49ED-87EE-559E632C59D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{621E4912-2441-49ED-87EE-559E632C59D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{621E4912-2441-49ED-87EE-559E632C59D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E5517D0-B2CF-417B-A6A8-7468ACDB402F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5517D0-B2CF-417B-A6A8-7468ACDB402F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5517D0-B2CF-417B-A6A8-7468ACDB402F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5517D0-B2CF-417B-A6A8-7468ACDB402F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB484DB6-F931-44A0-8829-5E52B93A117B}.Release|Any CPU.ActiveCfg = Release|Any CPU
