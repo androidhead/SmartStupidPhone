@@ -9,27 +9,7 @@ using StupidSmartPhone.Core;
 namespace TranscriptInteractor
 {
     public class TranscriptParser
-    {
-        #region InjectionPropertiesAndMethods
-        DateParser _dateParser;
-        DateParser DateParser
-        {
-            get
-            {
-                if (_dateParser == null)
-                {
-                    _dateParser = new DateParser();
-                }
-                return _dateParser;
-            }
-        }
-    
-        public void InjectDateParser(DateParser dateParser)
-        {
-            _dateParser = dateParser;
-        }
-        #endregion
-
+    { 
         public CalendarAddMessage ParseTranscriptToCalendar(string transcript)
         {
             //expects 2 lines
