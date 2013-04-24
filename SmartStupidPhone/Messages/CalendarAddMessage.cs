@@ -8,7 +8,7 @@ namespace Messages
 {
     public class CalendarAddMessage
     {
-        public DateTime dateTime {get;set;}
-        public string title { get; set; }
+        public DateTime DateTime {get;set;}
+        public string Title { get; set; }
     }
 }
