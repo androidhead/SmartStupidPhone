@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using StupidSmartPhone.Core;
@@ -16,7 +17,17 @@ namespace TranscriptInteractor.Test
         [TestMethod]
         public void ParseTranscriptToCalendar_Basic_Success()
         {
+            var dateParserMock = new Mock<IDateParser>();
+            var expectedDateResult = DateTime.Now;
+            dateParserMock.Setup(dp => dp.GetDateFromYyyymmddhhmiString(It.IsAny<string>()))
+                .Returns(expectedDateResult);
+            var transcriptParser = new TranscriptParser(dateParserMock.Object);
 
+            StringBuilder transcript = new StringBuilder();
+            transcript.AppendLine("ThisShouldBeSomeParseableDateTimeString");
+            transcript.AppendLine("event title");
+            
+            transcriptParser.ParseTranscriptToCalendar(transcript.ToString());
         }
 
         [TestMethod]
