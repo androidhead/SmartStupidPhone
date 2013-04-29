@@ -18,9 +18,14 @@ namespace TranscriptInteractor.Test
         [TestMethod]
         public void ParseTranscriptToCalendar_Basic_Success()
         {
-            var expectedDateResult = DateTime.Now;
-            TranscriptParser transcriptParser = GetTranscriptParser(expectedDateResult);
+            //note:  could have abstracted these tests a little more, but didn't for demonstration purposes          
+            var expectedDateResult = DateTime.Now;            
+            var dateParserMock = new Mock<IDateParser>();
+            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+                .Returns(expectedDateResult);
 
+            var transcriptParser = new TranscriptParser(dateParserMock.Object);
+                       
             StringBuilder transcript = new StringBuilder();            
             //doesn't really matter what this value is due to mocking
             transcript.AppendLine("201304241518");                 
@@ -37,8 +42,13 @@ namespace TranscriptInteractor.Test
         [TestMethod]
         public void ParseTranscriptToCalendar_LessThanTwoLines_Null()
         {
-            TranscriptParser transcriptParser = GetTranscriptParser(DateTime.Now);
+            var expectedDateResult = DateTime.Now;
+            var dateParserMock = new Mock<IDateParser>();
+            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+                .Returns(expectedDateResult);
 
+            var transcriptParser = new TranscriptParser(dateParserMock.Object);
+ 
             StringBuilder transcript = new StringBuilder();            
             transcript.AppendLine("line1");
 
@@ -51,11 +61,16 @@ namespace TranscriptInteractor.Test
         [TestMethod]
         public void ParseTranscriptToCalendar_DateTimeNotFound_Null()
         {
-            TranscriptParser transcriptParser = GetTranscriptParser(null);
+            var dateParserMock = new Mock<IDateParser>();
+            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+                .Returns(new DateTime?());
+
+            var transcriptParser = new TranscriptParser(dateParserMock.Object);
+
 
             StringBuilder transcript = new StringBuilder();
             //doesn't really matter what this value is due to mocking
-            transcript.AppendLine("201304241518");
+            transcript.AppendLine("");
             string eventTitle = "test title";
             transcript.AppendLine(eventTitle);
 
@@ -69,7 +84,11 @@ namespace TranscriptInteractor.Test
         public void ParseTranscriptToCalendar_TitleIsEmpty_Null()
         {
             var expectedDateResult = DateTime.Now;
-            TranscriptParser transcriptParser = GetTranscriptParser(expectedDateResult);
+            var dateParserMock = new Mock<IDateParser>();
+            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+                .Returns(expectedDateResult);
+
+            var transcriptParser = new TranscriptParser(dateParserMock.Object);
 
             StringBuilder transcript = new StringBuilder();
             
@@ -82,19 +101,5 @@ namespace TranscriptInteractor.Test
 
             Assert.AreEqual(null, calendarAddMessage);
         }
-
-        #region helpers
-        TranscriptParser GetTranscriptParser(DateTime? expectedDateTime)
-        {
-            var dateParserMock = new Mock<IDateParser>();
-            var expectedDateResult = DateTime.Now;
-            dateParserMock.Setup(dp => dp.GetDateFromYyyymmddhhmiString(It.IsAny<string>()))
-                .Returns(expectedDateResult);
-            var transcriptParser = new TranscriptParser(dateParserMock.Object);
-
-            return transcriptParser;
-        }
-
-        #endregion
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupidSmartPhone.Core", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranscriptInteractor.Test", "TranscriptInteractor.Test\TranscriptInteractor.Test.csproj", "{A1290779-5EDF-459C-ABCB-FD8DE2F9AE8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupidSmartPhone.Core.Test", "StupidSmartPhone.Core.Test\StupidSmartPhone.Core.Test.csproj", "{6527F2C1-54E7-48F9-892E-94A4D587A32F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{A1290779-5EDF-459C-ABCB-FD8DE2F9AE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1290779-5EDF-459C-ABCB-FD8DE2F9AE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1290779-5EDF-459C-ABCB-FD8DE2F9AE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6527F2C1-54E7-48F9-892E-94A4D587A32F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6527F2C1-54E7-48F9-892E-94A4D587A32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6527F2C1-54E7-48F9-892E-94A4D587A32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6527F2C1-54E7-48F9-892E-94A4D587A32F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

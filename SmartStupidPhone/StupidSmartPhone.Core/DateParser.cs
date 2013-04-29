@@ -13,7 +13,7 @@ namespace StupidSmartPhone.Core
         /// </summary>
         /// <param name="yyyymmddhhmi"></param>
         /// <returns></returns>
-        public DateTime? GetDateFromYyyymmddhhmiString(string yyyymmddhhmi)
+        public DateTime? GetDateTimeFromYyyymmddhhmiString(string yyyymmddhhmi)
         {
             throw new NotImplementedException();
         }

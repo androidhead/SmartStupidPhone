@@ -18,13 +18,40 @@ namespace TranscriptInteractor
         {
             _dateParser = dateParser;
         }
+
+        /// <summary>
+        /// If invalid, returns null
+        /// expects 2 or more lines
+        /// first represents date
+        /// second represents title
+        /// if problem, return null
+        /// </summary>
+        /// <param name="transcript"></param>
+        /// <returns></returns>
         public CalendarAddMessage ParseTranscriptToCalendar(string transcript)
         {
-            //expects 2 lines
-            //first represents date
-            //second represents title
-            //if problem, return null
-            throw new NotImplementedException();
-        }
+            var calendarAddMessage = new CalendarAddMessage();
+
+            string[] lines = transcript.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);    
+            if (lines.Count() < 2)
+            {
+                return null;
+            }
+
+            DateTime? parsedDateTime = DateParser.GetDateTimeFromYyyymmddhhmiString(lines[0]);
+
+            if (parsedDateTime == null)
+            {
+                return null;
+            }
+            else
+            {
+                calendarAddMessage.DateTime = parsedDateTime.Value;
+            }
+
+            calendarAddMessage.Title = lines[1];
+
+            return calendarAddMessage;
+        }        
     }
 }
