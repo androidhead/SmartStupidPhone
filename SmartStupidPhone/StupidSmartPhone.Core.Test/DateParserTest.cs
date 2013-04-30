@@ -10,7 +10,7 @@ namespace StupidSmartPhone.Core.Test
         //handle any valid date (valid defined by DateTime object)
         //return null if dates are invalid        
         [TestMethod]
-        public void GetDateTimeFromYyyymmddhhmiString_MinDate_Success()
+        public void GetDateFromString_MinDate_Success()
         {
             var inputDateValue = DateTime.MinValue;
 
@@ -22,7 +22,7 @@ namespace StupidSmartPhone.Core.Test
                 inputDateValue.Minute.ToString().PadLeft(2, '0'));
         
             var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromYyyymmddhhmiString(dateParserInput);
+            DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             Assert.AreEqual(inputDateValue.Year, output.Value.Year);
             Assert.AreEqual(inputDateValue.Month, output.Value.Month);
@@ -32,7 +32,7 @@ namespace StupidSmartPhone.Core.Test
         }
 
         [TestMethod]
-        public void GetDateTimeFromYyyymmddhhmiString_MaxDate_Success()
+        public void GetDateFromString_MaxDate_Success()
         {
             var inputDateValue = DateTime.MinValue;
 
@@ -44,7 +44,7 @@ namespace StupidSmartPhone.Core.Test
                 inputDateValue.Minute.ToString().PadLeft(2, '0'));
 
             var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromYyyymmddhhmiString(dateParserInput);
+            DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             Assert.AreEqual(inputDateValue.Year, output.Value.Year);
             Assert.AreEqual(inputDateValue.Month, output.Value.Month);
@@ -54,7 +54,7 @@ namespace StupidSmartPhone.Core.Test
         }
 
         [TestMethod]
-        public void GetDateTimeFromYyyymmddhhmiString_RandomDate_Success()
+        public void GetDateFromString_RandomDate_Success()
         {
             var inputDateValue = DateTime.Now;
 
@@ -66,7 +66,7 @@ namespace StupidSmartPhone.Core.Test
                 inputDateValue.Minute.ToString().PadLeft(2, '0'));
 
             var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromYyyymmddhhmiString(dateParserInput);
+            DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             Assert.AreEqual(inputDateValue.Year, output.Value.Year);
             Assert.AreEqual(inputDateValue.Month, output.Value.Month);
@@ -76,35 +76,34 @@ namespace StupidSmartPhone.Core.Test
         }
 
         [TestMethod]
-        public void GetDateTimeFromYyyymmddhhmiString_SlightlyInvalidDate_Null()
+        public void GetDateFromString_SlightlyInvalidDate_Null()
         {
-
             string dateParserInput = "200002301200";
 
             var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromYyyymmddhhmiString(dateParserInput);
+            DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             Assert.IsFalse(output.HasValue);
         }
 
         [TestMethod]
-        public void GetDateTimeFromYyyymmddhhmiString_EmptyInput_Null()
+        public void GetDateFromString_EmptyInput_Null()
         {
             string dateParserInput = String.Empty;
 
             var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromYyyymmddhhmiString(dateParserInput);
+            DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             Assert.IsFalse(output.HasValue);
         }
 
         [TestMethod]
-        public void GetDateTimeFromYyyymmddhhmiString_VeryInvalidDate_Null()
+        public void GetDateFromString_VeryInvalidDate_Null()
         {
             string dateParserInput = "this is not nearly a date";
 
             var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromYyyymmddhhmiString(dateParserInput);
+            DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             Assert.IsFalse(output.HasValue);
         }

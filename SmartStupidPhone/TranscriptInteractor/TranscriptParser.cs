@@ -38,7 +38,7 @@ namespace TranscriptInteractor
                 return null;
             }
 
-            DateTime? parsedDateTime = DateParser.GetDateTimeFromYyyymmddhhmiString(lines[0]);
+            DateTime? parsedDateTime = DateParser.GetDateTimeFromString(lines[0]);
 
             if (parsedDateTime == null)
             {

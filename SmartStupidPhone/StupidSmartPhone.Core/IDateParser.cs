@@ -8,6 +8,6 @@ namespace StupidSmartPhone.Core
 {
     public interface IDateParser
     {
-        DateTime? GetDateTimeFromYyyymmddhhmiString(string s);
+        DateTime? GetDateTimeFromString(string s);
     }
 }

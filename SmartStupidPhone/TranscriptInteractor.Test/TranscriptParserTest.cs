@@ -21,7 +21,7 @@ namespace TranscriptInteractor.Test
             //note:  could have abstracted these tests a little more, but didn't for demonstration purposes          
             var expectedDateResult = DateTime.Now;            
             var dateParserMock = new Mock<IDateParser>();
-            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+            dateParserMock.Setup(dp => dp.GetDateTimeFromString(It.IsAny<string>()))
                 .Returns(expectedDateResult);
 
             var transcriptParser = new TranscriptParser(dateParserMock.Object);
@@ -44,7 +44,7 @@ namespace TranscriptInteractor.Test
         {
             var expectedDateResult = DateTime.Now;
             var dateParserMock = new Mock<IDateParser>();
-            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+            dateParserMock.Setup(dp => dp.GetDateTimeFromString(It.IsAny<string>()))
                 .Returns(expectedDateResult);
 
             var transcriptParser = new TranscriptParser(dateParserMock.Object);
@@ -62,7 +62,7 @@ namespace TranscriptInteractor.Test
         public void ParseTranscriptToCalendar_DateTimeNotFound_Null()
         {
             var dateParserMock = new Mock<IDateParser>();
-            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+            dateParserMock.Setup(dp => dp.GetDateTimeFromString(It.IsAny<string>()))
                 .Returns(new DateTime?());
 
             var transcriptParser = new TranscriptParser(dateParserMock.Object);
@@ -85,7 +85,7 @@ namespace TranscriptInteractor.Test
         {
             var expectedDateResult = DateTime.Now;
             var dateParserMock = new Mock<IDateParser>();
-            dateParserMock.Setup(dp => dp.GetDateTimeFromYyyymmddhhmiString(It.IsAny<string>()))
+            dateParserMock.Setup(dp => dp.GetDateTimeFromString(It.IsAny<string>()))
                 .Returns(expectedDateResult);
 
             var transcriptParser = new TranscriptParser(dateParserMock.Object);
