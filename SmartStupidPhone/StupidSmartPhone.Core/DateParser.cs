@@ -15,8 +15,11 @@ namespace StupidSmartPhone.Core
         /// <returns></returns>
         public DateTime? GetDateTimeFromString(string dateString)
         {
+            //todo: DEMONSTRATE: test-first:  show this method as throwing NotImplemented Exception, then write implementation
+            
             //todo: DEMONSTRATE: refactoring: show tests passing with code as-is
             //then abstract things out, use unit tests to ensure it still works            
+                                    
             if(dateString.Length < 12)
             {
                 return null;

@@ -8,6 +8,6 @@ namespace GoogleInteractor
 {
     interface IGmailReader
     {
-        string GetEarliestUnreadMessage();   
+        string GetEarliestUnreadTranscript();   
     }
 }
