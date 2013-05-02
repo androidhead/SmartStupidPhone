@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoogleInteractor
+namespace SmartStupidPhone.Console
 {
-    interface IGCalendarWriter
+    class MailProcessor
     {
-        bool WriteToGCalendar(DateTime dateTime, string Title);    
     }
 }
