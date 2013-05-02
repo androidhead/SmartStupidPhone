@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GoogleInteractor\GoogleInteractor.csproj">
+    <ProjectReference Include="..\GoogleInteractor\ExternalInteractor.csproj">
       <Project>{621e4912-2441-49ed-87ee-559e632c59d3}</Project>
-      <Name>GoogleInteractor</Name>
+      <Name>ExternalInteractor</Name>
     </ProjectReference>
     <ProjectReference Include="..\Messages\Messages.csproj">
       <Project>{6e5517d0-b2cf-417b-a6a8-7468acdb402f}</Project>

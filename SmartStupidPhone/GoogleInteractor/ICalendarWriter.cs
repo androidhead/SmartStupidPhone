@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Messages;
 
-namespace GoogleInteractor
+namespace ExternalInteractor
 {
-    public interface IGcalendarWriter
+    public interface ICalendarWriter
     {
         bool WriteToGcalendar(CalendarAddMessage calendarAddMessage);
     }

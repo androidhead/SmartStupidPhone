@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GoogleInteractor.Test
+namespace ExternalInteractor.Test
 {
     [TestClass]
     public class UnitTest1

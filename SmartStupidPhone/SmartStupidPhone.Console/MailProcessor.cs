@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GoogleInteractor;
+using ExternalInteractor;
 using TranscriptInteractor;
 using Messages;
 
@@ -14,13 +14,13 @@ namespace SmartStupidPhone.Console
         #region InjectionProperties
         readonly ITranscriptParser _transcriptParser;
         ITranscriptParser TranscriptParser { get { return _transcriptParser; } }
-        readonly IGmailReader _gmailReader;
-        IGmailReader GmailReader { get { return _gmailReader; } }
-        readonly IGcalendarWriter _gcalendarWriter;
-        IGcalendarWriter GCalendarWriter { get { return _gcalendarWriter; } }
+        readonly IMailReader _gmailReader;
+        IMailReader GmailReader { get { return _gmailReader; } }
+        readonly ICalendarWriter _gcalendarWriter;
+        ICalendarWriter GCalendarWriter { get { return _gcalendarWriter; } }
         #endregion
 
-        public MailProcessor(ITranscriptParser transcriptParser, IGmailReader gmailReader, IGcalendarWriter gcalendarWriter)
+        public MailProcessor(ITranscriptParser transcriptParser, IMailReader gmailReader, ICalendarWriter gcalendarWriter)
         {
             _transcriptParser = transcriptParser;
             _gmailReader = gmailReader;

@@ -7,7 +7,7 @@
     <ProjectGuid>{621E4912-2441-49ED-87EE-559E632C59D3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GoogleInteractor</RootNamespace>
+    <RootNamespace>ExternalInteractor</RootNamespace>
     <AssemblyName>GoogleInteractor</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IGcalendarWriter.cs" />
-    <Compile Include="IGmailReader.cs" />
+    <Compile Include="ICalendarWriter.cs" />
+    <Compile Include="IMailReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

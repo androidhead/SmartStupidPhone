@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartStupidPhone.Console", "SmartStupidPhone.Console\SmartStupidPhone.Console.csproj", "{F43F58F1-7255-404B-9B1A-6F83BB3A6CB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleInteractor", "GoogleInteractor\GoogleInteractor.csproj", "{621E4912-2441-49ED-87EE-559E632C59D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalInteractor", "GoogleInteractor\ExternalInteractor.csproj", "{621E4912-2441-49ED-87EE-559E632C59D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{6E5517D0-B2CF-417B-A6A8-7468ACDB402F}"
 EndProject
@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranscriptInteractor.Test",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupidSmartPhone.Core.Test", "StupidSmartPhone.Core.Test\StupidSmartPhone.Core.Test.csproj", "{6527F2C1-54E7-48F9-892E-94A4D587A32F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleInteractor.Test", "GoogleInteractor.Test\GoogleInteractor.Test.csproj", "{1A00104A-E58E-483D-81FB-68F41BE57149}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalInteractor.Test", "GoogleInteractor.Test\ExternalInteractor.Test.csproj", "{1A00104A-E58E-483D-81FB-68F41BE57149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

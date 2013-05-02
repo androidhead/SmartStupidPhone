@@ -6,7 +6,7 @@
     <ProjectGuid>{1A00104A-E58E-483D-81FB-68F41BE57149}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GoogleInteractor.Test</RootNamespace>
+    <RootNamespace>ExternalInteractor.Test</RootNamespace>
     <AssemblyName>GoogleInteractor.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
