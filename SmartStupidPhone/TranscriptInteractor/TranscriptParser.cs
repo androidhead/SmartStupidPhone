@@ -8,7 +8,7 @@ using StupidSmartPhone.Core;
 
 namespace TranscriptInteractor
 {
-    public class TranscriptParser
+    public class TranscriptParser : ITranscriptParser
     {
         #region InjectionProperties
         readonly IDateParser _dateParser;

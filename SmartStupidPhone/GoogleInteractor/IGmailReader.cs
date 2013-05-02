@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GoogleInteractor
 {
-    interface IGmailReader
+    public interface IGmailReader
     {
         string GetEarliestUnreadTranscript();   
     }

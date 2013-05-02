@@ -7,7 +7,7 @@ using Messages;
 
 namespace GoogleInteractor
 {
-    interface IGcalendarWriter
+    public interface IGcalendarWriter
     {
         bool WriteToGcalendar(CalendarAddMessage calendarAddMessage);
     }

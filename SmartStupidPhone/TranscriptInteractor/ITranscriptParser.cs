@@ -8,7 +8,7 @@ using StupidSmartPhone.Core;
 
 namespace TranscriptInteractor
 {
-    interface ITranscriptParser
+    public interface ITranscriptParser
     {
         CalendarAddMessage ParseTranscriptToCalendar(string transcript);
     }

@@ -10,6 +10,8 @@ namespace SmartStupidPhone.Console
     {
         static void Main(string[] args)
         {
+            
+        
         }
     }
 }
