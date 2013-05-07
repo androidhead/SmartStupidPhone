@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GMailReader.cs" />
     <Compile Include="ICalendarWriter.cs" />
     <Compile Include="IMailReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
