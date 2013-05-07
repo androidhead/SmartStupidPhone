@@ -1,12 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StupidSmartPhone.Core;
-
-namespace StupidSmartPhone.Core.Test
-{
-    [TestClass]
-    public class DateParserTest
-    {
+﻿/*
         //handle any valid date (valid defined by DateTime object)
         //return null if dates are invalid        
         [TestMethod]
@@ -107,5 +99,4 @@ namespace StupidSmartPhone.Core.Test
 
             Assert.IsFalse(output.HasValue);
         }
-    }
-}
+*/

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StupidSmartPhone.Core.Test")]
+[assembly: AssemblyTitle("Notes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("StupidSmartPhone.Core.Test")]
+[assembly: AssemblyProduct("Notes")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9611dd40-31aa-4a4d-96af-5e7bbe893c4d")]
+[assembly: Guid("674e9672-6e28-4b4b-ab44-2d8233335a89")]
 
 // Version information for an assembly consists of the following four values:
 //
