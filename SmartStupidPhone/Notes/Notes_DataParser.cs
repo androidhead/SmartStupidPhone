@@ -1,4 +1,8 @@
-﻿/*
+﻿/* //first implementation 
+        public DateTime? GetDateTimeFromString(string dateString)
+        {
+ 
+            public DateTime?
             if(dateString.Length < 12)
             {
                 return null;
@@ -49,3 +53,48 @@
             return parsedDateTime;
         }
 */
+
+/* //better implementation
+       public DateTime? GetDateTimeFromString(string dateString)
+       {
+           if (dateString.Length < 12)
+           {
+               return null;
+           }
+
+           int? year = ParseIntFromString(dateString, 0, 4);
+           int? month = ParseIntFromString(dateString, 4, 2);
+           int? day = ParseIntFromString(dateString, 6, 2);
+           int? hour = ParseIntFromString(dateString, 8, 2);
+           int? minute = ParseIntFromString(dateString, 10, 2);
+
+           DateTime? parsedDateTime = null;
+           if (year.HasValue && month.HasValue && day.HasValue && hour.HasValue && minute.HasValue)
+           {
+               try
+               {
+                   parsedDateTime = new DateTime(year.Value, month.Value, day.Value, hour.Value, minute.Value, 0, 0);
+               }
+               catch (System.ArgumentOutOfRangeException)
+               {
+                   return null;
+               }
+           }
+
+           return parsedDateTime;
+       }
+
+       int? ParseIntFromString(string s, int start, int length)
+       {
+           int output = 0;
+           if (!int.TryParse(s.Substring(start, length), out output))
+           {
+               return null;
+           }
+           else
+           {
+               return output;
+           }
+       } 
+*/
+ 

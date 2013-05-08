@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Notes_DataParser.cs" />
-    <Compile Include="Notes_DateParserTest.cs" />
+    <Content Include="Notes_DataParser.cs" />
+    <None Include="Notes_DateParserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
