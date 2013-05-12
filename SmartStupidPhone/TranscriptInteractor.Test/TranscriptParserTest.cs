@@ -11,24 +11,20 @@ namespace TranscriptInteractor.Test
     [TestClass]
     public class TranscriptParserTest
     {
-        //first line should be taken care of by Core.DateParser
-        //second line should be description            
-        //anything afterwards should be ignored
-        //if it fails, just returns null 
         [TestMethod]
         public void ParseTranscriptToCalendar_Basic_Success()
         {
-            //note:  could have abstracted these tests a little more, but didn't for demonstration purposes          
-            var expectedDateResult = DateTime.Now;            
+            var expectedDateResult = new DateTime(2013,4,24,15,18,0);
+            string stringToBeInputtedIntoDateParser = "201304241518";                
             var dateParserMock = new Mock<IDateParser>();
-            dateParserMock.Setup(dp => dp.GetDateTimeFromString(It.IsAny<string>()))
+            dateParserMock.Setup(dp => dp.GetDateTimeFromString(stringToBeInputtedIntoDateParser))
                 .Returns(expectedDateResult);
 
             var transcriptParser = new TranscriptParser(dateParserMock.Object);
                        
             StringBuilder transcript = new StringBuilder();            
-            //doesn't really matter what this value is due to mocking
-            transcript.AppendLine("201304241518");                 
+            //doesn't really matter what this date/time value is due to mocking
+            transcript.AppendLine(stringToBeInputtedIntoDateParser);                 
             string eventTitle = "test title";
             transcript.AppendLine(eventTitle);
             
