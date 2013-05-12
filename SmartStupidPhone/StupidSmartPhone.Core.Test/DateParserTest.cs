@@ -7,8 +7,6 @@ namespace StupidSmartPhone.Core.Test
     [TestClass]
     public class DateParserTest
     {
-        //handle any valid date (valid defined by DateTime object)
-        //return null if dates are invalid        
         [TestMethod]
         public void GetDateFromString_MinDateYYYYMMDDHHMM_Success()
         {
@@ -117,7 +115,7 @@ namespace StupidSmartPhone.Core.Test
                 inputDateValue.Month,
                 "/",
                 inputDateValue.Day,
-                " ", //todo: good place for a purposeful mistake
+                " ",
                 inputDateValue.Hour,
                 ":",
                 inputDateValue.Minute.ToString().PadLeft(2, '0'));
@@ -125,7 +123,7 @@ namespace StupidSmartPhone.Core.Test
             var dateParser = new DateParser();
             DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
-            Assert.AreEqual(DateTime.Now.Year, inputDateValue.Year);
+            Assert.AreEqual(DateTime.Now.Year, output.Value.Year);
             Assert.AreEqual(inputDateValue.Month, output.Value.Month);
             Assert.AreEqual(inputDateValue.Day, output.Value.Day);
             Assert.AreEqual(inputDateValue.Minute, output.Value.Minute);
@@ -167,7 +165,7 @@ namespace StupidSmartPhone.Core.Test
                 inputDateValue.Day,
                 " ",
                 inputDateValue.Hour,
-                ":", //todo: good place for a purposeful mistake
+                ":", //adb: good place for a purposeful mistake
                 inputDateValue.Minute.ToString().PadLeft(2, '0'));
 
             var dateParser = new DateParser();
@@ -175,7 +173,7 @@ namespace StupidSmartPhone.Core.Test
             DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
             //purposeful mistake
-            Assert.AreEqual(DateTime.Now.Year, inputDateValue.Year);
+            Assert.AreEqual(DateTime.Now.Year, output.Value.Year);
             Assert.AreEqual(inputDateValue.Month, output.Value.Month);
             Assert.AreEqual(inputDateValue.Day, output.Value.Day);
             Assert.AreEqual(inputDateValue.Minute, output.Value.Minute);
