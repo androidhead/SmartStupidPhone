@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StupidSmartPhone.Core\StupidSmartPhone.Core.csproj">
+    <ProjectReference Include="..\StupidSmartPhone.Core\SmartStupidPhone.Core.csproj">
       <Project>{2ff2afa8-eb01-4248-ba70-0327995d54d2}</Project>
-      <Name>StupidSmartPhone.Core</Name>
+      <Name>SmartStupidPhone.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

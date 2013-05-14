@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StupidSmartPhone.Core
+namespace SmartStupidPhone.Core
 {
     public interface IDateParser
     {

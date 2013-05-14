@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StupidSmartPhone.Core;
+using SmartStupidPhone.Core;
 
 namespace SmartStupidPhone.Core.Test
 {

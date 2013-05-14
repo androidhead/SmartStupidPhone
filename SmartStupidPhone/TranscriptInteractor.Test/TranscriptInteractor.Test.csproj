@@ -61,9 +61,9 @@
       <Project>{6e5517d0-b2cf-417b-a6a8-7468acdb402f}</Project>
       <Name>Messages</Name>
     </ProjectReference>
-    <ProjectReference Include="..\StupidSmartPhone.Core\StupidSmartPhone.Core.csproj">
+    <ProjectReference Include="..\StupidSmartPhone.Core\SmartStupidPhone.Core.csproj">
       <Project>{2ff2afa8-eb01-4248-ba70-0327995d54d2}</Project>
-      <Name>StupidSmartPhone.Core</Name>
+      <Name>SmartStupidPhone.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\TranscriptInteractor\TranscriptInteractor.csproj">
       <Project>{fb484db6-f931-44a0-8829-5e52b93a117b}</Project>

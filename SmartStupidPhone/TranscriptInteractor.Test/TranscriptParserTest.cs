@@ -2,7 +2,7 @@
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using StupidSmartPhone.Core;
+using SmartStupidPhone.Core;
 using TranscriptInteractor;
 using Messages;
 

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranscriptInteractor", "TranscriptInteractor\TranscriptInteractor.csproj", "{FB484DB6-F931-44A0-8829-5E52B93A117B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StupidSmartPhone.Core", "StupidSmartPhone.Core\StupidSmartPhone.Core.csproj", "{2FF2AFA8-EB01-4248-BA70-0327995D54D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartStupidPhone.Core", "StupidSmartPhone.Core\SmartStupidPhone.Core.csproj", "{2FF2AFA8-EB01-4248-BA70-0327995D54D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranscriptInteractor.Test", "TranscriptInteractor.Test\TranscriptInteractor.Test.csproj", "{A1290779-5EDF-459C-ABCB-FD8DE2F9AE8C}"
 EndProject
