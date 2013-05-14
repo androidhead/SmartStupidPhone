@@ -1,4 +1,7 @@
 ﻿/*  //first set of tests
+        
+        //note: add test on-the-fly
+ 
         [TestMethod]
         public void GetDateFromString_MinDate_Success()
         {
@@ -111,6 +114,17 @@
 */
 
 /*  //second set of tests
+        [TestMethod]
+        public void GetDateFromString_Basic_Success()
+        {
+            string input = "201305030101";
+
+            var dateParser = new DateParser();
+            DateTime? output = dateParser.GetDateTimeFromString(input);
+
+            Assert.AreEqual(new DateTime(2013, 5, 3, 1, 1, 0), output.Value);
+        }
+
         [TestMethod]
         public void GetDateFromString_MinDateYYYYMMDDHHMM_Success()
         {
