@@ -8,19 +8,6 @@ namespace SmartStupidPhone.Core.Test
     public class DateParserTest
     {
         [TestMethod]
-        public void GetDateFromString_Basic_Success()
-        {
-            string input = "201305030101";
-
-            var dateParser = new DateParser();
-            DateTime? output = dateParser.GetDateTimeFromString(input);
-
-            Assert.AreEqual(new DateTime(2013, 5, 3, 1, 1, 0), output.Value);
-        }
-        
-        //handle any valid date (valid defined by DateTime object)
-        //return null if dates are invalid                 
-        [TestMethod]
         public void GetDateFromString_MinDate_Success()
         {
             var inputDateValue = DateTime.MinValue;

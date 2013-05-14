@@ -1,6 +1,4 @@
 ﻿/*  //first set of tests
-        //handle any valid date (valid defined by DateTime object)
-        //return null if dates are invalid        
         [TestMethod]
         public void GetDateFromString_MinDate_Success()
         {
@@ -12,7 +10,7 @@
                 inputDateValue.Day.ToString().PadLeft(2, '0'),
                 inputDateValue.Hour.ToString().PadLeft(2, '0'),
                 inputDateValue.Minute.ToString().PadLeft(2, '0'));
-        
+
             var dateParser = new DateParser();
             DateTime? output = dateParser.GetDateTimeFromString(dateParserInput);
 
@@ -45,6 +43,17 @@
             Assert.AreEqual(inputDateValue.Hour, output.Value.Hour);
         }
 
+        [TestMethod]
+        public void GetDateFromString_NullInput_Null()
+        {
+            string input = null;
+
+            var dateParser = new DateParser();
+            DateTime? output = dateParser.GetDateTimeFromString(input);
+
+            Assert.IsNull(output);
+        }
+      
         [TestMethod]
         public void GetDateFromString_RandomDate_Success()
         {
@@ -167,7 +176,7 @@
             Assert.AreEqual(inputDateValue.Minute, output.Value.Minute);
             Assert.AreEqual(inputDateValue.Hour, output.Value.Hour);
         }
-
+ 
         [TestMethod]
         public void GetDateFromString_SlightlyInvalidDateYYYYMMDDHHMM_Null()
         {
@@ -201,6 +210,17 @@
             Assert.IsFalse(output.HasValue);
         }
 
+        [TestMethod]
+        public void GetDateFromString_NullInput_Null()
+        {
+            string input = null;
+
+            var dateParser = new DateParser();
+            DateTime? output = dateParser.GetDateTimeFromString(input);
+
+            Assert.IsNull(output);
+        }
+      
         [TestMethod]
         public void GetDateFromString_MinDateSlashFormat_Success()
         {
